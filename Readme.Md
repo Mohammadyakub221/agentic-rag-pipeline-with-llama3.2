@@ -22,13 +22,14 @@ Most RAG (Retrieval-Augmented Generation) systems perform a vector search for ev
 
 ## 🏗️ Technical Architecture
 
-
-
-1. **User Query**: Input from the terminal.
-2. **Agent Router**: A logic layer that checks for keywords related to documents/data.
-3. **Route A (RAG)**: Retrieves relevant snippets from the local PDF store using semantic search.
-4. **Route B (Direct)**: Bypasses the database for general knowledge questions (e.g., "How do I bake a cake?").
-5. **Response**: Llama 3.2 synthesizes the final answer.
+```mermaid
+graph TD
+    A[User Query] --> B{Agentic Router}
+    B -- "Keywords: PDF, Data, Report" --> C[Vector Store: ChromaDB]
+    B -- "General Knowledge" --> D[LLM: Llama 3.2]
+    C --> E[Context Retrieval]
+    E --> D
+    D --> F[Final Response]
 
 ---
 
@@ -39,4 +40,26 @@ Ensure you have [Ollama](https://ollama.com) installed and the following models 
 ```bash
 ollama pull llama3.2
 ollama pull nomic-embed-text
+
+###2. Clone the repository:
+```bash
+git clone [https://github.com/Mohammadyakub221/agentic-rag-pipeline-with-llama3.2.git](https://github.com/Mohammadyakub221/agentic-rag-pipeline-with-llama3.2.git)
+cd agentic-rag-pipeline-with-llama3.2
+
+###3.Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+
+###4.Install dependencies:
+```bash
+pip install -r requirements.txt
+
+##🚀 Usage:
+
+1.Place your PDF documents in the /data directory.
+2.Run the pipeline:
+```bash
+python src/main.py
+
 
