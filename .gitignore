@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+ENV/
+bin/
+lib/
+include/
+
+# Local Vector Database
+chroma_db/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data (Optional: keep this if you want to include sample PDFs, 
+# but remove if you have private documents in there)
+# data/* # System files
+.DS_Store
+Thumbs.db
