@@ -14,6 +14,7 @@ __pycache__/
 
 # Data (Optional: keep this if you want to include sample PDFs, 
 # but remove if you have private documents in there)
-# data/* # System files
+#System files
+data/*.pdf 
 .DS_Store
 Thumbs.db
