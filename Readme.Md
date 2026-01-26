@@ -30,3 +30,40 @@ graph TD
     C --> E[Context Retrieval]
     E --> D
     D --> F[Final Response]
+
+🛠️ Installation & Setup
+Prerequisites
+Ollama: Install from ollama.com
+
+Models:
+
+Bash
+
+ollama pull llama3.2
+ollama pull nomic-embed-text
+Setup
+Clone the repository:
+
+Bash
+
+git clone [https://github.com/Mohammadyakub221/agentic-rag-pipeline-with-llama3.2.git](https://github.com/Mohammadyakub221/agentic-rag-pipeline-with-llama3.2.git)
+cd agentic-rag-pipeline-with-llama3.2
+Create and activate a virtual environment:
+
+Bash
+
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+Install dependencies:
+
+Bash
+
+pip install -r requirements.txt
+🚀 Usage
+Place your PDF documents in the /data directory.
+
+Run the pipeline:
+
+Bash
+
+python src/main.py
