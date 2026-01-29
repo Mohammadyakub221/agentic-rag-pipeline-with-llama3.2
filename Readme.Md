@@ -62,37 +62,6 @@ graph TD
 
 ---
 
-## 🏗️ Tech Stack  
-
-| Component | Technology |
------------|------------
-LLM Engine | Ollama + Llama 3.2  
-Embeddings | nomic-embed-text  
-Framework | LangChain  
-Vector Store | ChromaDB  
-Language | Python 3.10+  
-
----
-
-## 📂 Project Structure  
-
-```
-agentic-rag-pipeline/
-│
-├── data/                  # PDF documents
-├── src/
-│   ├── main.py             # Entry point
-│   ├── router.py           # Agentic routing logic
-│   ├── retriever.py        # Vector retrieval pipeline
-│   ├── llm_handler.py      # LLM interaction
-│
-├── chroma_db/              # Persistent vector store
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## ⚙️ Installation Guide  
 
 ### 1️⃣ Install Ollama  
@@ -108,18 +77,10 @@ ollama pull llama3.2
 ollama pull nomic-embed-text
 ```
 
----
-
-### 2️⃣ Clone Repository  
-
-```bash
-git clone https://github.com/Mohammadyakub221/agentic-rag-pipeline-with-llama3.2.git
-cd agentic-rag-pipeline-with-llama3.2
-```
 
 ---
 
-### 3️⃣ Create Virtual Environment  
+### Create Virtual Environment  
 
 ```bash
 python -m venv venv
@@ -139,7 +100,7 @@ source venv/bin/activate
 
 ---
 
-### 4️⃣ Install Dependencies  
+### Install Dependencies  
 
 ```bash
 pip install -r requirements.txt
@@ -199,30 +160,5 @@ Direct LLM Answer:
 - No internet dependency after setup  
 - All data remains on-device  
 - Fully offline execution  
-
----
-
-## 🔮 Future Enhancements  
-
-- Multi-agent orchestration  
-- Streaming token responses  
-- Web UI (Streamlit / React)  
-- Multi-document ranking  
-- Chat memory integration  
-- Tool calling support  
-
----
-
-## 📜 License  
-
-MIT License — Free to use, modify, and distribute.
-
----
-
-## 👨‍💻 Author  
-
-**Mohammad Yakub**  
-AI & Data Science Engineer  
-GitHub: https://github.com/Mohammadyakub221  
 
 ---
